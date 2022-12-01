@@ -6,9 +6,10 @@ namespace Ex32
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            //Surface testSurface = new Surface();  エラーになる
+            float height, width;
+
             Rectangle rectAngle1 = new Rectangle(3, 5);
             RightTriangle rightTriangle = new RightTriangle(2, 7);
             Circle circle = new Circle(5);
@@ -18,6 +19,8 @@ namespace Ex32
             {
                 Console.WriteLine($"surfacesの面積は{surfaces[i].GetSurface()}");
                 Console.WriteLine($"surfacesの周囲長は{surfaces[i].GetCircumference()}");
+                surfaces[i].GetBounds(out height, out width);
+                Console.WriteLine($"Surfaceが入る長方形の長さは縦{height} 横{width}\n");
             }
         }
     

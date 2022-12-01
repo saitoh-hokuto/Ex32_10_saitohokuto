@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AbstractSample
 {
@@ -18,6 +20,11 @@ namespace AbstractSample
         public override float GetCircumference()
         {
             return (float)(radius*2*Math.PI);
+        }
+        public override void GetBounds(out float height,out float width)
+        {
+            height = radius * 2.0f;
+            width = radius * 2.0f;
         }
     }
 }
